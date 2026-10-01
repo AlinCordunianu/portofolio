@@ -1,0 +1,39 @@
+@use '../../styles/colors.scss' as colors;
+
+.listcomponent-container {
+    border-top: 1px solid colors.$color-border;
+    padding: 36px 0 42px;
+
+    .listcomponent-title {
+        padding-bottom: 30px;
+    }
+    .listcomponent-list {
+        display: flex;
+        flex-wrap: wrap;
+        .listcomponent-column {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            h3 {
+                font-size: 15px;
+                padding-bottom: 9px;
+            }
+
+            .listcomponent-items {
+                font-size: 15px;
+                padding-bottom: 9px;
+                color: colors.$color-text-muted;
+            }
+            @media (max-width: 1024px) {
+                width: 33.333%;
+            }
+            @media  (max-width: 768px) {
+                width: 50%;
+            }
+            
+        }
+        
+    }
+}

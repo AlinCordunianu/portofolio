@@ -1,0 +1,270 @@
+[
+  {
+    "type": "header",
+    "id": "header",
+    "content": {
+      "logo": {
+        "src": "/images/AC_logo.png",
+        "alt": {
+          "en": "AC logo",
+          "ro": "Logo AC"
+        }
+      },
+      "navigation": [
+        {
+          "label": {
+            "en": "Work",
+            "ro": "Proiecte"
+          },
+          "target": "#work"
+        },
+        {
+          "label": {
+            "en": "About",
+            "ro": "Despre"
+          },
+          "target": "#about"
+        },
+        {
+          "label": {
+            "en": "Contact",
+            "ro": "Contact"
+          },
+          "target": "#contact"
+        }
+      ],
+      "languages": [
+        "en",
+        "ro"
+      ]
+    }
+  },
+  {
+    "type": "hero",
+    "id": "hero",
+    "content": {
+      "name": "Alin Cordunianu",
+      "role": {
+        "en": "Frontend Developer",
+        "ro": "Frontend Developer"
+      },
+      "description": {
+        "en": "I build web interfaces and interactive experiences using React and JavaScript.",
+        "ro": "Construiesc interfete web si experiente interactive folosind React si JavaScript."
+      },
+      "location": {
+        "en": "Based in Bucharest, Romania.",
+        "ro": "Bazat in Bucuresti, Romania."
+      },
+      "image": {
+        "src": "/images/hero-workspace.jpg",
+        "alt": {
+          "en": "Minimal workspace with laptop and plant",
+          "ro": "Birou minimalist cu laptop si planta"
+        }
+      },
+      "primaryAction": {
+        "label": {
+          "en": "View work",
+          "ro": "Vezi proiectele"
+        },
+        "target": "#work"
+      },
+      "secondaryAction": {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/",
+        "external": true
+      }
+    }
+  },
+  {
+    "type": "twocolumncard",
+    "id": "scan-and-slay",
+    "content": {
+      "sectionId": "work",
+      "sectionTitle": {
+        "en": "Selected Work",
+        "ro": "Proiecte selectate"
+      },
+      "number": "01",
+      "title": {
+        "en": "Scan & Slay",
+        "ro": "Scan & Slay"
+      },
+      "description": {
+        "en": "Interactive browser game built around object detection.",
+        "ro": "Joc interactiv in browser construit in jurul detectiei de obiecte."
+      },
+      "stack": [
+        "React",
+        "JavaScript",
+        "YOLO",
+        "CSS"
+      ],
+      "image": {
+        "src": "src/assets/images/laptop.png",
+        "alt": {
+          "en": "Scan & Slay gameplay",
+          "ro": "Gameplay Scan & Slay"
+        }
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Live",
+            "ro": "Live"
+          },
+          "url": "/scanandslay"
+        },
+        {
+          "label": "GitHub",
+          "url": "#"
+        }
+      ]
+    }
+  },
+  {
+    "type": "twocolumncard",
+    "id": "3d-cv",
+    "content": {
+      "number": "02",
+      "title": {
+        "en": "3D CV",
+        "ro": "CV 3D"
+      },
+      "description": {
+        "en": "Interactive 3D portfolio experiment for the web.",
+        "ro": "Experiment de portofoliu 3D interactiv pentru web."
+      },
+      "stack": [
+        "React",
+        "A-Frame",
+        "Three.js",
+        "Blender"
+      ],
+      "image": {
+        "src": "src/assets/images/laptop.png",
+        "alt": {
+          "en": "3D CV project preview",
+          "ro": "Previzualizare proiect CV 3D"
+        }
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Live",
+            "ro": "Live"
+          },
+          "url": "#"
+        },
+        {
+          "label": "GitHub",
+          "url": "#"
+        }
+      ]
+    }
+  },
+  {
+    "type": "listcomponent",
+    "id": "skills",
+    "content": {
+      "title": {
+        "en": "Skills",
+        "ro": "Competente"
+      },
+      "columns": [
+        {
+          "title": {
+            "en": "Frontend",
+            "ro": "Frontend"
+          },
+          "items": [
+            "React",
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ]
+        },
+        {
+          "title": {
+            "en": "State Management",
+            "ro": "Management stare"
+          },
+          "items": [
+            "Redux",
+            "Context API",
+            "Zustand"
+          ]
+        },
+        {
+          "title": {
+            "en": "APIs & Real-time",
+            "ro": "API-uri & Real-time"
+          },
+          "items": [
+            "REST APIs",
+            "WebSockets",
+            "GraphQL"
+          ]
+        },
+        {
+          "title": {
+            "en": "3D & Graphics",
+            "ro": "3D & Grafica"
+          },
+          "items": [
+            "Three.js",
+            "WebGL",
+            "A-Frame",
+            "Blender"
+          ]
+        },
+        {
+          "title": {
+            "en": "Tools & Others",
+            "ro": "Unelte & Altele"
+          },
+          "items": [
+            "Git",
+            "Vite",
+            "npm",
+            "Figma"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "textcard",
+    "id": "about",
+    "content": {
+      "sectionId": "about",
+      "title": {
+        "en": "About",
+        "ro": "Despre"
+      },
+      "text": {
+        "en": "I'm a frontend developer based in Bucharest, focused on building clean, performant interfaces and interactive web experiences. I enjoy turning ideas into real products and exploring creative projects, from browser games to 3D experiences on the web.",
+        "ro": "Sunt frontend developer in Bucuresti, concentrat pe construirea unor interfete curate, performante si a unor experiente web interactive. Imi place sa transform ideile in produse reale si sa explorez proiecte creative, de la jocuri in browser pana la experiente 3D pe web."
+      }
+    }
+  },
+  {
+    "type": "footer",
+    "id": "footer",
+    "content": {
+      "sectionId": "contact",
+      "email": "alin.cordunianu@gmail.com",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,45 @@
+ @use './colors.scss' as colors;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: colors.$color-background;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  margin: 0;
+}
+
+button {
+  border: 0;
+  background: none;
+  padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin:0 10%;
+
+    @media  (max-width: 768px) {
+        width: 90%;
+        margin: 0 5%;
+
+    }
+}

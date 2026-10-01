@@ -1,0 +1,21 @@
+@use '../../styles/colors.scss' as colors;
+
+.textcard-container {
+    display: flex;
+    border-top: 1px solid colors.$color-border;
+    padding: 36px 0;
+    gap: 120px;
+
+    .textcard-description {
+        font-size: 18px;
+        color: colors.$color-text-muted;
+        width: 50%;
+    }
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        gap:18px;
+        .textcard-description {
+            width: 100%;
+        }
+    }
+}

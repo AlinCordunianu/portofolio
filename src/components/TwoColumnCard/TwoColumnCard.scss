@@ -1,0 +1,75 @@
+@use '../../styles/typography.scss' as fonts;
+@use '../../styles/colors.scss' as colors;
+
+.twocolumn-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 36px ;
+    border-top: 1px solid colors.$color-border; 
+    .twocolumn-section-title {
+        font-size: 32px;
+    }
+    .twocolumn-content {
+        display: flex;
+        flex-direction: row;
+        margin: 46px 0;
+
+        .twocolumn-text-container{
+            display: flex;
+            flex-direction: column;
+            width: 33%;
+            .twocolumn-title {
+                font-size: 28px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 16px;
+                span {
+                    font-weight: fonts.$font-weight-regular;
+                    font-size: 15px;
+                    color: colors.$color-text-muted;
+
+                }
+            }
+            .twocolumn-description {
+                font-size: 17px;
+                color: colors.$color-text-muted;
+                margin-bottom: 16px;
+
+            }
+            .twocolumn-stack {
+                font-size: 15px;
+                color: colors.$color-text-muted;
+                margin-bottom: 16px;
+
+            }
+            .twocolumn-button-container {
+                display: flex;
+                gap: 28px;
+            }
+        }
+        img {
+            width: 66%;
+            object-fit: cover;
+            object-position: right;
+        }
+    }
+    @media  (max-width: 768px) {
+        .twocolumn-content {
+            flex-direction: column;
+
+            .twocolumn-text-container{
+                width: 100%;
+            }
+
+            img{
+                width: 100%;
+                padding-top: 14px;
+                
+            }
+        }
+        
+
+       
+    }
+}

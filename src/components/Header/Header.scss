@@ -1,0 +1,72 @@
+@use '../../index.scss';
+@use '../../styles/colors.scss' as colors;
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 34px 10% 70px;
+
+    
+    .header-logo {
+        width: 46px;
+        height: 46px;
+    }
+    .header-button-container {
+        > span {
+            display: inline-flex;
+            align-items: baseline;
+            vertical-align: baseline;
+
+            > span {
+                margin: 0 6px;
+                color: colors.$color-text-muted;
+                font-size: 15px;
+
+                @media (max-width: 768px) {
+                    font-size: 13px;
+                }
+            }
+
+            > button[aria-pressed] {
+                background: none;
+                border: 0;
+                padding: 0;
+                color: colors.$color-text-muted;
+                cursor: pointer;
+
+                &[aria-pressed='true'] {
+                    color: colors.$color-text;
+                    text-decoration: underline;
+                    text-underline-offset: 3px;
+                }
+
+                &:hover {
+                    color: colors.$color-text;
+                }
+            }
+        }
+
+        .header-button + span {
+            margin-left: 8px;
+        }
+
+        .header-button {
+            background-color: transparent;
+            border: 0;
+            color: #171717;
+            cursor: pointer;
+            padding:0 17px;
+
+            @media  (max-width: 768px) {
+                padding:0 9px;
+            }
+            
+        }
+        
+    }
+    
+    @media  (max-width: 768px) {
+        margin: 22px 5% 54px;
+    }
+}
