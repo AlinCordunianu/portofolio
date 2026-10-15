@@ -1,72 +1,145 @@
-@use '../../index.scss';
-@use '../../styles/colors.scss' as colors;
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 34px 10% 70px;
-
-    
-    .header-logo {
-        width: 46px;
-        height: 46px;
+@use "../../styles/tokens" as *;
+.header {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+  border-bottom: 1px solid rgba($border, 0.55);
+}
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: transform 0.25s;
+  &:hover {
+    transform: translateY(-2px);
+  }
+  img {
+    width: 52px;
+    height: 48px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+  }
+}
+.navigation {
+  display: flex;
+  gap: 45px;
+  a {
+    position: relative;
+    font-size: 10px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    padding: 14px 0;
+    transition: color 0.2s;
+    &:hover {
+      color: $lime;
     }
-    .header-button-container {
-        > span {
-            display: inline-flex;
-            align-items: baseline;
-            vertical-align: baseline;
-
-            > span {
-                margin: 0 6px;
-                color: colors.$color-text-muted;
-                font-size: 15px;
-
-                @media (max-width: 768px) {
-                    font-size: 13px;
-                }
-            }
-
-            > button[aria-pressed] {
-                background: none;
-                border: 0;
-                padding: 0;
-                color: colors.$color-text-muted;
-                cursor: pointer;
-
-                &[aria-pressed='true'] {
-                    color: colors.$color-text;
-                    text-decoration: underline;
-                    text-underline-offset: 3px;
-                }
-
-                &:hover {
-                    color: colors.$color-text;
-                }
-            }
-        }
-
-        .header-button + span {
-            margin-left: 8px;
-        }
-
-        .header-button {
-            background-color: transparent;
-            border: 0;
-            color: #171717;
-            cursor: pointer;
-            padding:0 17px;
-
-            @media  (max-width: 768px) {
-                padding:0 9px;
-            }
-            
-        }
-        
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 7px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: $lime;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s;
     }
-    
-    @media  (max-width: 768px) {
-        margin: 22px 5% 54px;
+    &:is(:hover, :focus-visible)::after {
+      transform: scaleX(1);
     }
+  }
+}
+.header-end {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.availability {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  i {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: $lime;
+    box-shadow: 0 0 12px $lime;
+  }
+}
+.languages {
+  display: flex;
+  gap: 4px;
+  button {
+    padding: 8px 5px;
+    color: $muted;
+    font-size: 10px;
+    &[aria-pressed="true"] {
+      color: $ink;
+      border-bottom: 1px solid $lime;
+    }
+    &:hover {
+      color: $lime;
+    }
+  }
+}
+.menu-toggle {
+  display: none;
+  width: 36px;
+  height: 44px;
+  span {
+    display: block;
+    width: 25px;
+    height: 1px;
+    background: $ink;
+    margin: 7px auto;
+  }
+}
+@media (max-width: 850px) {
+  .availability {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    height: 76px;
+  }
+  .header-end {
+    gap: 14px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .navigation {
+    display: none;
+    &.is-open {
+      display: flex;
+      position: absolute;
+      top: 75px;
+      left: -5.55%;
+      width: 111.1%;
+      padding: 24px 5%;
+      background: $surface;
+      border-bottom: 1px solid $border;
+      justify-content: space-around;
+      gap: 12px;
+    }
+  }
+}
+.navigation a {
+  font-size: 12px;
+}
+.availability {
+  font-size: 10px;
+}
+.languages button {
+  font-size: 11px;
+  min-width: 32px;
+  min-height: 44px;
 }

@@ -33,10 +33,7 @@
           "target": "#contact"
         }
       ],
-      "languages": [
-        "en",
-        "ro"
-      ]
+      "languages": ["en", "ro"]
     }
   },
   {
@@ -49,8 +46,8 @@
         "ro": "Frontend Developer"
       },
       "description": {
-        "en": "I build web interfaces and interactive experiences using React and JavaScript.",
-        "ro": "Construiesc interfete web si experiente interactive folosind React si JavaScript."
+        "en": "Interactive web experiences, 3D UI, and creative frontend projects.",
+        "ro": "Experiențe web interactive, interfețe 3D și proiecte frontend creative."
       },
       "location": {
         "en": "Based in Bucharest, Romania.",
@@ -92,27 +89,22 @@
         "ro": "Scan & Slay"
       },
       "description": {
-        "en": "Interactive browser game built around object detection.",
-        "ro": "Joc interactiv in browser construit in jurul detectiei de obiecte."
+        "en": "An AR monster-hunting experience. Object detection meets 3D creatures and camera-based gameplay.",
+        "ro": "O experiență AR de vânătoare de monștri. Detecție de obiecte, creaturi 3D și joc prin cameră."
       },
-      "stack": [
-        "React",
-        "JavaScript",
-        "YOLO",
-        "CSS"
-      ],
+      "stack": ["React", "JavaScript", "YOLO", "3D models", "Camera API"],
       "image": {
         "src": "src/assets/images/laptop.png",
         "alt": {
-          "en": "Scan & Slay gameplay",
-          "ro": "Gameplay Scan & Slay"
+          "en": "AR concept artwork: a stone monster seen through a phone camera",
+          "ro": "Concept AR: un monstru de piatra vazut prin camera telefonului"
         }
       },
       "links": [
         {
           "label": {
-            "en": "Live",
-            "ro": "Live"
+            "en": "View project",
+            "ro": "Vezi proiectul"
           },
           "url": "/scanandslay"
         },
@@ -121,6 +113,24 @@
           "url": "#"
         }
       ]
+    }
+  },
+  {
+    "type": "twocolumncard",
+    "id": "cocapair",
+    "content": {
+      "number": "02",
+      "variant": "coca",
+      "title": {
+        "en": "CocaPair",
+        "ro": "CocaPair"
+      },
+      "description": {
+        "en": "Two cans. One connection. A mobile-first experience pairing Coca-Cola Original and Zero with a custom-trained YOLO model.",
+        "ro": "Două doze. O conexiune. O experiență mobilă ce asociază Coca-Cola Original și Zero cu un model YOLO antrenat special."
+      },
+      "stack": ["React", "YOLO", "Computer vision"],
+      "links": []
     }
   },
   {
@@ -136,12 +146,7 @@
         "en": "Interactive 3D portfolio experiment for the web.",
         "ro": "Experiment de portofoliu 3D interactiv pentru web."
       },
-      "stack": [
-        "React",
-        "A-Frame",
-        "Three.js",
-        "Blender"
-      ],
+      "stack": ["React", "A-Frame", "Three.js", "Blender"],
       "image": {
         "src": "src/assets/images/laptop.png",
         "alt": {
@@ -178,58 +183,42 @@
             "en": "Frontend",
             "ro": "Frontend"
           },
-          "items": [
-            "React",
-            "JavaScript",
-            "HTML",
-            "CSS"
-          ]
+          "items": ["React", "JavaScript", "TypeScript", "HTML", "CSS", "SCSS"]
         },
         {
           "title": {
             "en": "State Management",
             "ro": "Management stare"
           },
-          "items": [
-            "Redux",
-            "Context API",
-            "Zustand"
-          ]
+          "items": ["Redux", "Context API", "Zustand"]
         },
         {
           "title": {
             "en": "APIs & Real-time",
             "ro": "API-uri & Real-time"
           },
-          "items": [
-            "REST APIs",
-            "WebSockets",
-            "GraphQL"
-          ]
+          "items": ["REST APIs", "WebSockets", "GraphQL"]
         },
         {
           "title": {
             "en": "3D & Graphics",
             "ro": "3D & Grafica"
           },
-          "items": [
-            "Three.js",
-            "WebGL",
-            "A-Frame",
-            "Blender"
-          ]
+          "items": ["Three.js", "WebGL", "A-Frame", "Blender"]
         },
         {
           "title": {
             "en": "Tools & Others",
             "ro": "Unelte & Altele"
           },
-          "items": [
-            "Git",
-            "Vite",
-            "npm",
-            "Figma"
-          ]
+          "items": ["Git", "Vite", "npm", "Figma"]
+        },
+        {
+          "title": {
+            "en": "Computer Vision",
+            "ro": "Viziune computerizata"
+          },
+          "items": ["YOLO", "Object detection", "Camera API"]
         }
       ]
     }
