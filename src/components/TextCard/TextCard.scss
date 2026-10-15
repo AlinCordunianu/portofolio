@@ -1,21 +1,66 @@
-@use '../../styles/colors.scss' as colors;
-
-.textcard-container {
-    display: flex;
-    border-top: 1px solid colors.$color-border;
-    padding: 36px 0;
-    gap: 120px;
-
-    .textcard-description {
-        font-size: 18px;
-        color: colors.$color-text-muted;
-        width: 50%;
+@use "../../styles/tokens" as *;
+.about {
+  border-top: 1px solid $border;
+  padding: 65px 0 80px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 90px;
+  align-items: center;
+  h2 {
+    font-size: clamp(28px, 3.4vw, 48px);
+    line-height: 1.12;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    margin: 24px 0 30px;
+    em {
+      color: #acbf92;
+      font-style: normal;
     }
-    @media (max-width: 1024px) {
-        flex-direction: column;
-        gap:18px;
-        .textcard-description {
-            width: 100%;
-        }
+  }
+}
+.about-body {
+  > p {
+    font-size: 16px;
+    color: $muted;
+    line-height: 1.85;
+  }
+}
+.about-note {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 30px;
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $muted;
+}
+@media (max-width: 800px) {
+  .about {
+    gap: 35px;
+    grid-template-columns: 1fr;
+    padding: 45px 0;
+    h2 {
+      font-size: 34px;
     }
+  }
+  .about-body > p {
+    font-size: 15px;
+  }
+}
+.about-note {
+  font-size: 10px;
+}
+.about-body > p {
+  max-width: 60ch;
+}
+@media (max-width: 600px) {
+  .about h2 {
+    font-size: clamp(28px, 8.7vw, 34px);
+  }
+}
+@media (max-width: 800px) {
+  .about-body > p {
+    font-size: 16px;
+  }
 }

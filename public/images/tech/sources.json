@@ -1,0 +1,82 @@
+[
+  {
+    "name": "aframe",
+    "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/aframe.svg"
+  },
+  {
+    "name": "blender",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/blender/blender-original.svg"
+  },
+  {
+    "name": "css3",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+  },
+  {
+    "name": "figma",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg"
+  },
+  {
+    "name": "git",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
+  },
+  {
+    "name": "graphql",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain.svg"
+  },
+  {
+    "name": "html5",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+  },
+  {
+    "name": "javascript",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+  },
+  {
+    "name": "npm",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg"
+  },
+  {
+    "name": "react",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+  },
+  {
+    "name": "redux",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
+  },
+  {
+    "name": "sass",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+  },
+  {
+    "name": "threejs",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg"
+  },
+  {
+    "name": "typescript",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+  },
+  {
+    "name": "vite",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg"
+  },
+  {
+    "name": "webgl",
+    "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/webgl.svg"
+  },
+  {
+    "name": "yolo",
+    "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/yolo.svg"
+  },
+  {
+    "name": "zustand",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/zustand/zustand-original.svg"
+  },
+  {
+    "name": "github",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+  },
+  {
+    "name": "linkedin",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-plain.svg"
+  }
+]

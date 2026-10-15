@@ -1,25 +1,28 @@
-import { useState } from 'react';
-import { LanguageContext } from './LanguageContext';
+import { useEffect, useState } from "react";
+import { LanguageContext } from "./LanguageContext";
 
 export function LanguageProvider({ children }) {
-  const [language, updateLanguage] = useState('en');
+  const [language, updateLanguage] = useState("en");
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   function setLanguage(value) {
-    if (value === 'en' || value === 'ro') {
+    if (value === "en" || value === "ro") {
       updateLanguage(value);
     }
   }
 
   function translate(value) {
-    if (typeof value === 'string') {
+    if (typeof value === "string") {
       return value;
     }
 
-    if (!value || typeof value !== 'object') {
-      return '';
+    if (!value || typeof value !== "object") {
+      return "";
     }
 
-    return value[language] ?? value.en ?? '';
+    return value[language] ?? value.en ?? "";
   }
 
   return (
@@ -27,7 +30,7 @@ export function LanguageProvider({ children }) {
       value={{
         language,
         setLanguage,
-        translate
+        translate,
       }}
     >
       {children}

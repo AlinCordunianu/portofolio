@@ -23,3 +23,7 @@ package-lock.json
 *.njsproj
 *.sln
 *.sw?
+
+# Local browser captures and design audit artifacts
+.playwright-cli/
+.taste-skill/

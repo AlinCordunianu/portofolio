@@ -1,40 +1,63 @@
-import { useLanguage } from '../../context/LanguageContext';
-import './Header.scss';
-
+import { useState } from "react";
+import { useLanguage } from "../../context/LanguageContext";
+import "./Header.scss";
+import logo from "../../assets/AC_logo.png";
 export function Header({ content = {} }) {
   const { language, setLanguage, translate } = useLanguage();
-
-  function handleNavigation(target) {
-    if (!target) return;
-    const sectionId = target.replace(/^#/, '');
-    document.getElementById(sectionId)?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-  }
-
+  const [open, setOpen] = useState(false);
   return (
-    <div className="header-container container">
-      <img className="header-logo" src={content.logo?.src} alt={translate(content.logo?.alt)} />
-      <div className="header-button-container">
+    <header className="header container">
+      <a className="wordmark" href="#home" aria-label="Alin Cordunianu — home">
+        <img src={logo} alt="" width="52" height="48" />
+      </a>
+      <nav
+        id="main-navigation"
+        className={open ? "navigation is-open" : "navigation"}
+        aria-label={
+          language === "en" ? "Main navigation" : "Navigație principala"
+        }
+      >
         {(content.navigation ?? []).map((item) => (
-          <button
+          <a
             key={item.target}
-            className="header-button"
-            onClick={() => handleNavigation(item.target)}
+            href={item.target}
+            onClick={() => setOpen(false)}
           >
             {translate(item.label)}
-          </button>
+          </a>
         ))}
-        {(content.languages ?? ['en', 'ro']).map((value, index) => (
-          <span key={value}>
-            {index > 0 && <span>/</span>}
-            <button onClick={() => setLanguage(value)} aria-pressed={language === value}>
+      </nav>
+      <div className="header-end">
+        <span className="availability">
+          <i />
+          {language === "en"
+            ? "Open to opportunities"
+            : "Deschis la oportunitați"}
+        </span>
+        <div className="languages" aria-label="Language">
+          {["en", "ro"].map((value) => (
+            <button
+              key={value}
+              aria-pressed={language === value}
+              onClick={() => setLanguage(value)}
+            >
               {value.toUpperCase()}
             </button>
-          </span>
-        ))}
+          ))}
+        </div>
+        <button
+          className="menu-toggle"
+          aria-expanded={open}
+          aria-controls="main-navigation"
+          aria-label={
+            language === "en" ? "Toggle navigation" : "Deschide navigația"
+          }
+          onClick={() => setOpen(!open)}
+        >
+          <span />
+          <span />
+        </button>
       </div>
-    </div>
+    </header>
   );
 }

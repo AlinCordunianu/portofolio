@@ -1,0 +1,176 @@
+@use "../../styles/tokens" as *;
+
+.hero-atmosphere {
+  position: absolute;
+  inset: -96px 0 -70px;
+  z-index: -1;
+  pointer-events: none;
+  overflow: clip;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 16%,
+    #000 78%,
+    transparent
+  );
+  .fog-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: 67% 48%;
+  }
+  .hero-cloud {
+    overflow: visible;
+    opacity: 1;
+    animation: fog-breathe 6s ease-in-out -4s infinite;
+  }
+}
+.fog-layer--drift {
+  background:
+    radial-gradient(
+      ellipse 23% 30% at 73% 40%,
+      rgba(#839147, 0.23),
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 32% 19% at 49% 60%,
+      rgba($sage, 0.26),
+      transparent 100%
+    );
+  filter: blur(28px);
+  animation: fog-drift 16s ease-in-out -8s infinite;
+}
+.fog-layer--fragment {
+  background:
+    radial-gradient(
+      ellipse 14% 24% at 57% 42%,
+      rgba($ground, 0.64),
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 25% 13% at 81% 65%,
+      rgba($ground, 0.48),
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 22% 19% at 37% 55%,
+      rgba(#476236, 0.19),
+      transparent 100%
+    );
+  filter: blur(22px);
+  animation: fog-disperse 10s ease-in-out -2s infinite;
+}
+.fog-layer--highlight {
+  background: radial-gradient(
+    ellipse 19% 27% at 69% 43%,
+    rgba(#a0ad53, 0.2),
+    rgba(#677d32, 0.1) 48%,
+    transparent 100%
+  );
+  filter: blur(26px);
+  animation: fog-illuminate 8s ease-in-out -5s infinite;
+}
+@keyframes fog-breathe {
+  0%,
+  100% {
+    transform: translate3d(-1%, 1%, 0) scale(1.03, 1.08);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate3d(3%, -3%, 0) scale(1.12, 0.95);
+    opacity: 0.95;
+  }
+}
+@keyframes fog-drift {
+  0%,
+  100% {
+    transform: translate3d(-4%, 2%, 0) scale(1.02, 0.96);
+    opacity: 0.65;
+  }
+  45% {
+    transform: translate3d(6%, -4%, 0) scale(1.13, 1.1);
+    opacity: 0.95;
+  }
+  75% {
+    transform: translate3d(1%, 3%, 0) scale(0.98, 1.03);
+    opacity: 0.78;
+  }
+}
+@keyframes fog-disperse {
+  0%,
+  100% {
+    transform: translate3d(-3%, 2%, 0) scale(0.96, 1.05);
+    opacity: 0.35;
+  }
+  40% {
+    transform: translate3d(3%, -3%, 0) scale(1.11, 0.93);
+    opacity: 0.85;
+  }
+  70% {
+    transform: translate3d(1%, 3%, 0) scale(1.03, 1.1);
+    opacity: 0.55;
+  }
+}
+@keyframes fog-illuminate {
+  0%,
+  100% {
+    transform: translate3d(0, 1%, 0) scale(0.96);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate3d(1%, -1%, 0) scale(1.06);
+    opacity: 0.75;
+  }
+}
+.is-motion-paused .fog-layer {
+  animation-play-state: paused;
+}
+@media (max-width: 600px) {
+  .hero-atmosphere {
+    inset: 120px 0 -30px;
+    .fog-layer {
+      width: 190%;
+      left: -70%;
+    }
+    .fog-layer--drift {
+      display: none;
+    }
+    .fog-layer--fragment,
+    .fog-layer--highlight {
+      filter: blur(20px);
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-ambient-motion="running"]) .hero-atmosphere .fog-layer {
+    animation: none !important;
+  }
+}
+
+html[data-ambient-motion="paused"] {
+  .hero-atmosphere .fog-layer,
+  .contact-art::before,
+  .contact-art::after,
+  .contact-art > img {
+    animation-play-state: paused !important;
+  }
+}
+
+.ambient-motion-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 6px;
+  color: $muted;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  &:hover {
+    color: $lime;
+  }
+  span {
+    color: $lime;
+    font-size: 14px;
+  }
+}
