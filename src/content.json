@@ -69,7 +69,7 @@
       },
       "secondaryAction": {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/",
+        "url": "https://www.linkedin.com/in/cordunianu-alin-90089b1a6",
         "external": true
       }
     }
@@ -106,7 +106,7 @@
             "en": "View project",
             "ro": "Vezi proiectul"
           },
-          "url": "/scanandslay"
+          "url": "https://scanandslay.alincordunianu.ro/"
         },
         {
           "label": "GitHub",
@@ -247,11 +247,11 @@
       "links": [
         {
           "label": "GitHub",
-          "url": "https://github.com/"
+          "url": "https://github.com/AlinCordunianu"
         },
         {
           "label": "LinkedIn",
-          "url": "https://www.linkedin.com/"
+          "url": "https://www.linkedin.com/in/cordunianu-alin-90089b1a6"
         }
       ]
     }
