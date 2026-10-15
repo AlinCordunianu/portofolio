@@ -2,7 +2,6 @@ import { Component, lazy, Suspense, useEffect, useRef, useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import "./Hero.scss";
 import { HeroAtmosphere } from "./HeroAtmosphere";
-import { AmbientMotionControl } from "./AmbientMotionControl";
 const StoneScene = lazy(() => import("./StoneScene"));
 class SceneBoundary extends Component {
   state = { failed: false };
@@ -160,7 +159,6 @@ export function Hero({ content = {} }) {
         </div>
         <div className="hero-bottom">
           <span>{translate(content.location)}</span>
-          <AmbientMotionControl />
           {/* <div className="motion-controls">
             <button
               onClick={() => setPaused(!paused)}
