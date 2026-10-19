@@ -1,5 +1,7 @@
 ﻿import "./Footer.scss";
 import { useLanguage } from "../../context/LanguageContext";
+import { useRef } from "react";
+import { useSectionActivity } from "../../hooks/useSectionActivity";
 
 function MailIcon() {
   return (
@@ -18,12 +20,15 @@ function MailIcon() {
   );
 }
 export function Footer({ content = {} }) {
+  const footer = useRef(null);
+  const active = useSectionActivity(footer);
   const { language } = useLanguage();
   const email = `mailto:${content.email}`;
   return (
     <footer
+      ref={footer}
       id={content.sectionId}
-      className="contact"
+      className={`contact${active ? "" : " is-motion-paused"}`}
       aria-labelledby="contact-heading"
     >
       <div className="container">

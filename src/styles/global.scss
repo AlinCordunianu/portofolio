@@ -189,11 +189,15 @@ html[data-motion="running"] .reveal.is-revealed .reveal-item {
   html {
     scroll-behavior: auto;
   }
-  html:not([data-motion="running"]) *,
-  html:not([data-motion="running"]) *::before,
-  html:not([data-motion="running"]) *::after {
+  html *,
+  html *::before,
+  html *::after {
     animation: none !important;
     transition: none !important;
+  }
+  // Match the reveal rule's specificity so data-motion cannot bypass the system preference.
+  html[data-motion="running"] .reveal.is-revealed .reveal-item {
+    animation: none !important;
   }
 }
 .section-heading .note {
@@ -214,8 +218,10 @@ html[data-motion="paused"] {
 .button:is(:hover, :focus-visible) .arrow {
   transform: translate(2px, -2px);
 }
-html[data-motion="running"] .skill .tech-logo {
-  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.3, 1) !important;
+@media (prefers-reduced-motion: no-preference) {
+  html[data-motion="running"] .skill .tech-logo {
+    transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.3, 1) !important;
+  }
 }
 html[data-motion="running"] .header {
   animation: header-arrive 0.65s ease-out backwards;

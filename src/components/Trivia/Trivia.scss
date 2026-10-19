@@ -1,0 +1,205 @@
+@use "../../styles/tokens" as *;
+
+.trivia {
+  border-top: 1px solid $border; // taste-skill-ignore: thin separators explicitly requested.
+  padding: 44px 0 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.5fr);
+  gap: 64px;
+  align-items: start;
+}
+.trivia-heading {
+  h2 {
+    max-width: 10ch;
+    font-size: clamp(32px, 3.6vw, 48px);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+  }
+  p {
+    max-width: 34ch;
+    margin-top: 20px;
+    color: $muted;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+.trivia-story {
+  border-bottom: 1px solid $border; // taste-skill-ignore: the brief explicitly requests thin separators.
+} // taste-skill-ignore: requested editorial separators.
+.trivia-row-heading {
+  font: inherit;
+}
+.trivia-more-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  padding: 16px;
+  border-radius: 4px;
+  color: $lime;
+  font-size: 13px;
+  transition: background-color 200ms;
+  &:hover {
+    background: rgba($olive, 0.25);
+  }
+  &:focus-visible {
+    outline-offset: -2px;
+  }
+}
+.trivia-trigger {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr) 24px;
+  gap: 20px;
+  width: 100%;
+  min-height: 105px;
+  padding: 22px 4px 22px 0;
+  align-items: center;
+  text-align: left;
+  border-radius: 4px;
+  &:focus-visible {
+    outline-offset: -2px;
+  }
+  &:hover .trivia-title,
+  &[aria-expanded="true"] .trivia-title {
+    color: $lime;
+  }
+  &[aria-expanded="true"] .trivia-toggle::after {
+    transform: rotate(0);
+    opacity: 0;
+  }
+}
+.trivia-number {
+  align-self: center;
+  color: $muted;
+  font-size: 13px;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+.trivia-row-copy {
+  display: grid;
+  gap: 9px;
+  min-width: 0;
+}
+.trivia-category {
+  color: $lime;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.09em;
+}
+.trivia-title {
+  font-size: clamp(20px, 1.8vw, 25px);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+  transition: color 200ms;
+}
+.trivia-toggle {
+  position: relative;
+  width: 24px;
+  height: 32px;
+  color: $muted;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 1.5px;
+    margin: -0.75px 0 0 -6px;
+    background: currentColor;
+    transition:
+      transform 220ms,
+      opacity 220ms;
+  }
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+.trivia-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition:
+    grid-template-rows 300ms ease,
+    visibility 300ms;
+  &.is-open {
+    grid-template-rows: 1fr;
+    visibility: visible;
+  }
+}
+.trivia-panel-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+.trivia-story-copy {
+  padding: 0 44px 26px 46px;
+  p {
+    max-width: 62ch;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+.trivia-tag {
+  display: inline-block;
+  margin-top: 18px;
+  color: $muted;
+  font-size: 12px;
+  line-height: 1.5;
+  &::before {
+    content: "/ ";
+    color: $lime;
+  }
+}
+@media (max-width: 1000px) {
+  .trivia {
+    gap: 32px;
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.5fr);
+  }
+}
+@media (max-width: 700px) {
+  .trivia {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 34px 0 38px;
+  }
+  .trivia-heading {
+    h2 {
+      max-width: none;
+      font-size: 32px;
+    }
+    p {
+      max-width: 42ch;
+      margin-top: 14px;
+    }
+  }
+  .trivia-trigger {
+    gap: 12px;
+    min-height: 98px;
+    padding: 20px 0;
+    grid-template-columns: 22px minmax(0, 1fr) 20px;
+  }
+  .trivia-title {
+    font-size: 20px;
+  }
+  .trivia-category {
+    font-size: 9px;
+  }
+  .trivia-story-copy {
+    padding: 0 8px 24px 34px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-motion] .trivia .reveal.is-revealed .reveal-item {
+    animation: none !important;
+  }
+  .trivia *,
+  .trivia *::before,
+  .trivia *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

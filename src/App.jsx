@@ -6,6 +6,8 @@ import { TwoColumnCard } from "./components/TwoColumnCard/TwoColumnCard";
 import { ListComponent } from "./components/ListComponent/ListComponent";
 import { TextCard } from "./components/TextCard/TextCard";
 import { Footer } from "./components/Footer/Footer";
+import { ProfessionalWork } from "./components/ProfessionalWork/ProfessionalWork";
+import { Trivia } from "./components/Trivia/Trivia";
 import { useLanguage } from "./context/LanguageContext";
 import data from "./content.json";
 function App() {
@@ -37,6 +39,7 @@ function App() {
       <Header content={find("header")} />
       <main id="main">
         <Hero content={find("hero")} />
+        <TextCard content={find("about")} />
         <section
           id="work"
           className="work container reveal"
@@ -61,10 +64,10 @@ function App() {
                 <TwoColumnCard key={item.id} content={item.content} />
               ))}
           </div>
-          <TwoColumnCard content={find("3d-cv")} compact />
         </section>
+        <ProfessionalWork content={find("professional-work")} />
         <ListComponent content={find("skills")} />
-        <TextCard content={find("about")} />
+        <Trivia content={find("trivia")} />
       </main>
       <Footer content={find("footer")} />
     </>

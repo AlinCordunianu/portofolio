@@ -102,6 +102,13 @@
 .contact-art::before {
   animation: contact-glow 4.5s ease-in-out -1.5s infinite;
 }
+.contact.is-motion-paused {
+  .contact-art::before,
+  .contact-art::after,
+  .contact-art > img {
+    animation-play-state: paused;
+  }
+}
 .contact-art::after {
   inset: -8% -5%;
   background: radial-gradient(
@@ -240,9 +247,9 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  html:not([data-ambient-motion="running"]) .contact-art > img,
-  html:not([data-ambient-motion="running"]) .contact-art::before,
-  html:not([data-ambient-motion="running"]) .contact-art::after {
+  .contact-art > img,
+  .contact-art::before,
+  .contact-art::after {
     animation: none !important;
   }
   html[data-motion] .contact .reveal.is-revealed .reveal-item {
