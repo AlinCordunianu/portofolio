@@ -5,11 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/generate-stone-bounds.mjs",
-    "generate:stone-bounds": "node scripts/generate-stone-bounds.mjs",
-    "test:stone": "node scripts/verify-stone-bounds.mjs",
+    
     "build": "vite build",
-    "postbuild": "node scripts/prerender.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
