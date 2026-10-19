@@ -2,6 +2,8 @@ import { Component, lazy, Suspense, useEffect, useRef, useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import "./Hero.scss";
 import { HeroAtmosphere } from "./HeroAtmosphere";
+import { useReducedMotion } from "../../hooks/useReducedMotion";
+import { useDeferredScene } from "../../hooks/useDeferredScene";
 const StoneScene = lazy(() => import("./StoneScene"));
 class SceneBoundary extends Component {
   state = { failed: false };
@@ -28,46 +30,18 @@ function StoneFallback({ loading = false, language }) {
     </div>
   );
 }
-function TypedName({ name, paused }) {
-  const [count, setCount] = useState(0);
-  const progress = useRef(0);
-  useEffect(() => {
-    if (paused) return;
-    let current = progress.current;
-    if (current >= name.length) return;
-    let timer;
-    const type = () => {
-      current++;
-      progress.current = current;
-      setCount(current);
-      if (current < name.length)
-        timer = window.setTimeout(
-          type,
-          name[current - 1] === " " ? 320 : [80, 105, 70, 95, 85][current % 5],
-        );
-    };
-    timer = window.setTimeout(type, 180);
-    return () => window.clearTimeout(timer);
-  }, [name, paused]);
-  const visible = count;
+function HeroName({ name }) {
   const first = name.split(" ")[0];
   const last = name.slice(first.length + 1);
   return (
     <h1 aria-label={name}>
       <span className="name-lines" aria-hidden="true">
-        <span className="name-line">
-          <span className="name-reserve">{first}</span>
-          <span className="name-typed">{first.slice(0, visible)}</span>
+        <span className="name-line" data-name={first}>
+          {first}
         </span>
-        <span className="name-line">
-          <span className="name-reserve">
-            {last}
-            <span className="cursor">_</span>
-          </span>
-          <span className="name-typed">
-            {last.slice(0, Math.max(0, visible - first.length - 1))}
-            {visible === name.length && <span className="cursor">_</span>}
-          </span>
+        <span className="name-line" data-name={last}>
+          {last}
+          <span className="cursor">_</span>
         </span>
       </span>
     </h1>
@@ -78,6 +52,8 @@ export function Hero({ content = {} }) {
   const [paused] = useState(false);
   const [active, setActive] = useState(true);
   const hero = useRef();
+  const reducedMotion = useReducedMotion();
+  const showScene = useDeferredScene(active);
   useEffect(() => {
     document.documentElement.dataset.motion = paused ? "paused" : "running";
     return () => {
@@ -103,7 +79,7 @@ export function Hero({ content = {} }) {
     <section
       ref={hero}
       id="home"
-      className={`hero-stage has-autoplay${paused || !active ? " is-motion-paused" : ""}`}
+      className={`hero-stage has-autoplay${paused || !active || reducedMotion ? " is-motion-paused" : ""}`}
       aria-label={translate(content.role)}
     >
       <HeroAtmosphere />
@@ -112,7 +88,7 @@ export function Hero({ content = {} }) {
           <p className="eyebrow">
             <span>{translate(content.role)}</span>
           </p>
-          <TypedName name={content.name} paused={paused || !active} />
+          <HeroName name={content.name} />
           <p className="hero-description">{translate(content.description)}</p>
           <div className="hero-actions">
             <a className="button" href="#work">
@@ -135,11 +111,23 @@ export function Hero({ content = {} }) {
               : "Piatra magica verde animata cu fragmente orbitale"
           }
         >
-          <SceneBoundary fallback={fallback}>
-            <Suspense fallback={<StoneFallback loading language={language} />}>
-              <StoneScene paused={paused || !active} />
-            </Suspense>
-          </SceneBoundary>
+          {showScene ? (
+            <SceneBoundary fallback={fallback}>
+              <Suspense
+                fallback={
+                  <div className="stone-fallback" aria-hidden="true">
+                    <span className="fallback-orbit" />
+                  </div>
+                }
+              >
+                <StoneScene paused={paused || !active || reducedMotion} />
+              </Suspense>
+            </SceneBoundary>
+          ) : (
+            <div className="stone-fallback" aria-hidden="true">
+              <span className="fallback-orbit" />
+            </div>
+          )}
         </div>
         <div className="hero-aside">
           <span>

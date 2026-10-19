@@ -142,17 +142,8 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  html:not([data-ambient-motion="running"]) .hero-atmosphere .fog-layer {
+  .hero-atmosphere .fog-layer {
     animation: none !important;
-  }
-}
-
-html[data-ambient-motion="paused"] {
-  .hero-atmosphere .fog-layer,
-  .contact-art::before,
-  .contact-art::after,
-  .contact-art > img {
-    animation-play-state: paused !important;
   }
 }
 

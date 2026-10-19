@@ -170,6 +170,566 @@
     }
   },
   {
+    "type": "professionalwork",
+    "id": "professional-work",
+    "content": {
+      "title": {
+        "en": "Professional Work",
+        "ro": "Proiecte profesionale"
+      },
+      "subtitle": {
+        "en": "A selection of commercial platforms, interactive experiences, and digital campaigns I've helped build as part of professional development teams.",
+        "ro": "O selecție de platforme comerciale, experiențe interactive și campanii digitale la care am contribuit în cadrul unor echipe de dezvoltare."
+      },
+      "labels": {
+        "open": {
+          "en": "View Contributions",
+          "ro": "Vezi contribuțiile"
+        },
+        "close": {
+          "en": "Hide Contributions",
+          "ro": "Ascunde contribuțiile"
+        },
+        "contributions": {
+          "en": "My Contributions",
+          "ro": "Contribuțiile mele"
+        },
+        "unavailable": {
+          "en": "Original campaign experience no longer publicly available.",
+          "ro": "Experiența originală a campaniei nu mai este disponibilă public."
+        },
+        "placeholder": {
+          "en": "Project imagery unavailable",
+          "ro": "Imagini de proiect indisponibile"
+        },
+        "technologies": {
+          "en": "Technology highlights",
+          "ro": "Tehnologii utilizate"
+        },
+        "moreProjects": {
+          "en": "+ {count} projects",
+          "ro": "+ {count} proiecte"
+        },
+        "fewerProjects": {
+          "en": "− Fewer projects",
+          "ro": "− Mai puține proiecte"
+        }
+      },
+      "projects": [
+        {
+          "id": "intrastar",
+          "title": "IntraStar",
+          "category": {
+            "en": "Admin Dashboard / Entertainment",
+            "ro": "Panou de administrare / Divertisment"
+          },
+          "description": {
+            "en": "A social entertainment platform where emerging artists can showcase their talents through video performances and competitions.",
+            "ro": "O platformă de divertisment social unde artiștii la început de drum își pot prezenta talentul prin videoclipuri și concursuri."
+          },
+          "contributions": [
+            {
+              "en": "Developed frontend functionality for the platform's administrative dashboard.",
+              "ro": "Am dezvoltat funcționalități frontend pentru panoul de administrare al platformei."
+            },
+            {
+              "en": "Implemented user management interfaces.",
+              "ro": "Am implementat interfețe pentru gestionarea utilizatorilor."
+            },
+            {
+              "en": "Built workflows for reviewing, approving, and deleting user-reported videos.",
+              "ro": "Am construit fluxuri pentru verificarea, aprobarea și ștergerea videoclipurilor raportate de utilizatori."
+            },
+            {
+              "en": "Implemented real-time live-support chat using WebSockets.",
+              "ro": "Am implementat un chat de asistență în timp real folosind WebSockets."
+            },
+            {
+              "en": "Developed competition creation and management interfaces.",
+              "ro": "Am dezvoltat interfețe pentru crearea și gestionarea concursurilor."
+            },
+            {
+              "en": "Implemented dashboard statistics and reporting interfaces.",
+              "ro": "Am implementat interfețe pentru statistici și rapoarte."
+            },
+            {
+              "en": "Worked on administrator access and permission management.",
+              "ro": "Am lucrat la gestionarea accesului și a permisiunilor administratorilor."
+            }
+          ],
+          "technologies": [
+            "WebSockets",
+            "Admin Dashboard",
+            "REST APIs"
+          ],
+          "links": [
+            {
+              "label": {
+                "en": "Visit Website",
+                "ro": "Vizitează website-ul"
+              },
+              "url": "https://intrastar.app/"
+            }
+          ],
+          "note": {
+            "en": "My contribution focused on the administrative dashboard, rather than the public-facing mobile app.",
+            "ro": "Contribuția mea s-a concentrat pe panoul de administrare, nu pe aplicația mobilă publică."
+          },
+          "image": {
+            "src": "/images/professional-work/intrastar.png",
+            "alt": {
+              "en": "IntraStar public mobile app branding shown on a phone; not the administrative dashboard",
+              "ro": "Identitatea aplicației mobile publice IntraStar pe un telefon; nu panoul de administrare"
+            },
+            "caption": {
+              "en": "Public app branding — not dashboard work",
+              "ro": "Identitate aplicație publică — nu panoul de administrare"
+            },
+            "credit": "IntraStar",
+            "source": "https://intrastar.app/",
+            "originalUrl": "https://cms.intrastar.app//sites/default/files/2025-03/Group%2039912%20%281%29%20%281%29.png",
+            "width": 429,
+            "height": 602,
+            "fit": "contain"
+          }
+        },
+        {
+          "id": "wpp-microverse",
+          "title": "The WPP Microverse",
+          "category": {
+            "en": "Augmented Reality / Interactive Campaign",
+            "ro": "Realitate augmentată / Campanie interactivă"
+          },
+          "description": {
+            "en": "A marker-based WebAR experience created for WPP at Cannes Lions, bringing interactive 3D content to life through a physical coaster.",
+            "ro": "O experiență WebAR creată pentru WPP la Cannes Lions, care aducea la viață conținut 3D interactiv folosind un suport de pahar ca reper vizual."
+          },
+          "contributions": [
+            {
+              "en": "Developed the WebAR frontend using React and 8th Wall.",
+              "ro": "Am dezvoltat interfața WebAR folosind React și 8th Wall."
+            },
+            {
+              "en": "Implemented image-target tracking using a physical coaster as the tracking marker.",
+              "ro": "Am implementat urmărirea unei imagini de pe un suport de pahar, folosită ca reper vizual."
+            },
+            {
+              "en": "Integrated a 3D object that appeared anchored above the coaster.",
+              "ro": "Am integrat un obiect 3D care apărea ancorat deasupra suportului."
+            },
+            {
+              "en": "Worked on the mobile camera-based experience initiated through a QR code.",
+              "ro": "Am lucrat la experiența mobilă bazată pe cameră, accesată printr-un cod QR."
+            }
+          ],
+          "technologies": [
+            "React",
+            "8th Wall",
+            "WebAR",
+            "Image Tracking",
+            "3D"
+          ],
+          "image": {
+            "src": "/images/professional-work/microverse.png",
+            "alt": {
+              "en": "WPP",
+              "ro": "WPP"
+            },
+           
+            "credit": "WPP",
+            "width": 429,
+            "height": 602,
+            "fit": "contain"
+          },
+          "links": [],
+          "year": 2022,
+          "unavailable": true
+        },
+        {
+          "id": "stimorol-dj",
+          "title": "Stimorol DJ App",
+          "category": {
+            "en": "Interactive Campaign / Computer Vision",
+            "ro": "Campanie interactivă / Viziune computerizată"
+          },
+          "description": {
+            "en": "An interactive music experience that used camera-based recognition of Stimorol packaging to connect physical products with digital music creation.",
+            "ro": "O experiență muzicală interactivă ce folosea camera pentru recunoașterea ambalajelor Stimorol, conectând produsele fizice cu creația muzicală digitală."
+          },
+          "contributions": [
+            {
+              "en": "Worked on camera-based object detection functionality.",
+              "ro": "Am lucrat la funcționalitatea de detectare a obiectelor prin cameră."
+            },
+            {
+              "en": "Integrated object recognition into the frontend experience.",
+              "ro": "Am integrat recunoașterea obiectelor în interfața aplicației."
+            },
+            {
+              "en": "Contributed to interactive functionality connecting physical packaging to the application.",
+              "ro": "Am contribuit la funcționalitățile interactive care conectau ambalajele fizice cu aplicația."
+            }
+          ],
+          "technologies": [],
+          "links": [
+            {
+              "label": {
+                "en": "View Case Study",
+                "ro": "Vezi studiul de caz"
+              },
+              "url": "https://danyboletas.ch/projects/stimorol-dj-app"
+            }
+          ],
+          "unavailable": true,
+          "note": {
+            "en": "This professional experience later inspired my personal CocaPair computer vision project.",
+            "ro": "Această experiență profesională a inspirat ulterior CocaPair, proiectul meu personal de viziune computerizată."
+          },
+          "image": {
+            "src": "/images/professional-work/stimorol.png",
+            "alt": {
+              "en": "Stimorol DJ music interface on a laptop and phone, from the designer’s case study",
+              "ro": "Interfața muzicală Stimorol DJ pe laptop și telefon, din studiul de caz al designerului"
+            },
+            "caption": {
+              "en": "Published project imagery",
+              "ro": "Imagini publicate ale proiectului"
+            },
+            "credit": "Dany Boletas",
+            "source": "https://danyboletas.ch/projects/stimorol-dj-app",
+            "originalUrl": "https://framerusercontent.com/images/c29g6OkokdMEFR2TFCJYsolBNug.jpg",
+            "width": 1100,
+            "height": 619
+          }
+        },
+        {
+          "id": "rnib-spectrum-shift",
+          "title": "RNIB Spectrum Shift",
+          "category": {
+            "en": "Game Development / Accessibility",
+            "ro": "Dezvoltare de jocuri / Accesibilitate"
+          },
+          "description": {
+            "en": "An accessible gaming experience developed to demonstrate how inclusive design can improve gameplay for people with sight loss.",
+            "ro": "O experiență de gaming accesibilă, creată pentru a demonstra cum designul incluziv poate îmbunătăți jocurile pentru persoanele cu deficiențe de vedere."
+          },
+          "contributions": [
+            {
+              "en": "Implemented player controls and gameplay interactions using Godot.",
+              "ro": "Am implementat comenzile jucătorului și interacțiunile de joc folosind Godot."
+            },
+            {
+              "en": "Worked on level design and selected gameplay puzzles.",
+              "ro": "Am lucrat la designul nivelurilor și la unele puzzle-uri din joc."
+            },
+            {
+              "en": "Implemented game save and progress persistence logic.",
+              "ro": "Am implementat logica de salvare a jocului și a progresului."
+            },
+            {
+              "en": "Developed the checkpoint system.",
+              "ro": "Am dezvoltat sistemul de puncte de control."
+            }
+          ],
+          "technologies": [
+            "Godot"
+          ],
+          "links": [
+            {
+              "label": {
+                "en": "View Case Study",
+                "ro": "Vezi studiul de caz"
+              },
+              "url": "https://www.rnib.org.uk/living-with-sight-loss/assistive-aids-and-technology/tv-audio-and-gaming/design-for-every-gamer/"
+            },
+            {
+              "label": {
+                "en": "Watch Video",
+                "ro": "Vezi videoclipul"
+              },
+              "url": "https://www.youtube.com/watch?v=y5EJsMGfGLU"
+            }
+          ],
+          "unavailable": true,
+          "image": {
+            "src": "/images/professional-work/spectrum-shift.jpg",
+            "alt": {
+              "en": "A gamer holding a controller in RNIB’s Design for Every Gamer campaign film",
+              "ro": "Un jucător cu un controler în filmul campaniei RNIB Design for Every Gamer"
+            },
+            "caption": {
+              "en": "Campaign film still — not a gameplay screenshot",
+              "ro": "Cadru din filmul campaniei — nu captură din joc"
+            },
+            "credit": "RNIB",
+            "source": "https://www.rnib.org.uk/living-with-sight-loss/assistive-aids-and-technology/tv-audio-and-gaming/design-for-every-gamer/",
+            "originalUrl": "https://media.rnib.org.uk/images/Screen_Shot_2022-09-12_at_16.19.10.width-1000.png",
+            "width": 1000,
+            "height": 699
+          }
+        },
+        {
+          "id": "fanta-ride-n-sip",
+          "title": "Fanta Ride N Sip",
+          "category": {
+            "en": "Interactive Campaign / 3D",
+            "ro": "Campanie interactivă / 3D"
+          },
+          "description": {
+            "en": "A mobile rollercoaster game where players balance a virtual glass of Fanta during an interactive ride.",
+            "ro": "Un joc mobil de tip rollercoaster în care jucătorii mențin în echilibru un pahar virtual de Fanta pe parcursul unei curse interactive."
+          },
+          "contributions": [
+            {
+              "en": "Integrated a 3D Fanta glass model into the rollercoaster experience.",
+              "ro": "Am integrat un model 3D al unui pahar de Fanta în experiența de rollercoaster."
+            },
+            {
+              "en": "Worked with TypeScript in a commercial project for the first time.",
+              "ro": "Am folosit TypeScript pentru prima dată într-un proiect comercial."
+            },
+            {
+              "en": "Contributed to frontend functionality supporting the interactive experience.",
+              "ro": "Am contribuit la funcționalitățile frontend ale experienței interactive."
+            }
+          ],
+          "technologies": [
+            "TypeScript",
+            "3D Integration",
+            "Interactive Web"
+          ],
+          "links": [
+            {
+              "label": {
+                "en": "View Campaign",
+                "ro": "Vezi campania"
+              },
+              "url": "https://www.coca-cola.com/ch/fr/offerings/fanta-fenix"
+            }
+          ],
+          "year": 2023,
+          "unavailable": true,
+          "note": {
+            "en": "Developed in collaboration with Subvrsive.",
+            "ro": "Dezvoltat în colaborare cu Subvrsive."
+          },
+          "image": {
+            "src": "/images/professional-work/fanta-ride-n-sip.webp",
+            "alt": {
+              "en": "Official Fanta Ride N Sip artwork showing an orange rollercoaster and the game title",
+              "ro": "Imagine oficială Fanta Ride N Sip cu un rollercoaster portocaliu și titlul jocului"
+            },
+            "caption": {
+              "en": "Official campaign artwork · 2024 reference",
+              "ro": "Imagine oficială de campanie · referință din 2024"
+            },
+            "credit": "Coca-Cola",
+            "source": "https://www.coca-cola.com/ch/fr/offerings/fanta-fenix",
+            "originalUrl": "https://www.coca-cola.com/content/dam/onexp/global/central/offerings/fanta-fenix-2024/card_fanta_fenix_ride-n-sip_mobile.jpg",
+            "width": 1000,
+            "height": 800
+          }
+        },
+        {
+          "id": "dent-estet",
+          "title": "DENT ESTET",
+          "category": {
+            "en": "Healthcare Website",
+            "ro": "Website / Sănătate"
+          },
+          "description": {
+            "en": "Frontend development contributions to the digital platform of a Romanian dental clinic network.",
+            "ro": "Contribuții frontend la platforma digitală a unei rețele de clinici stomatologice din România."
+          },
+          "contributions": [
+            {
+              "en": "Developed and maintained reusable frontend components.",
+              "ro": "Am dezvoltat și întreținut componente frontend reutilizabile."
+            },
+            {
+              "en": "Implemented interactive forms.",
+              "ro": "Am implementat formulare interactive."
+            },
+            {
+              "en": "Worked on frontend integrations with backend APIs.",
+              "ro": "Am lucrat la integrarea interfeței cu API-urile backend."
+            },
+            {
+              "en": "Built responsive interfaces across desktop, tablet and mobile.",
+              "ro": "Am construit interfețe responsive pentru desktop, tabletă și mobil."
+            }
+          ],
+          "technologies": [],
+          "links": [
+            {
+              "label": {
+                "en": "Visit Website",
+                "ro": "Vizitează website-ul"
+              },
+              "url": "https://dentestet.ro/"
+            }
+          ],
+          "image": {
+            "src": "/images/professional-work/dent-estet.webp",
+            "alt": {
+              "en": "A DENT ESTET dentist and patient in a dental clinic, from the official website",
+              "ro": "Un medic DENT ESTET și o pacientă într-o clinică stomatologică, de pe website-ul oficial"
+            },
+            "caption": {
+              "en": "Official brand photography",
+              "ro": "Fotografie oficială de brand"
+            },
+            "credit": "DENT ESTET",
+            "source": "https://dentestet.ro/",
+            "originalUrl": "https://dentestet.ro/uploads/GEO_4511_3c15652522.webp",
+            "width": 1100,
+            "height": 733
+          }
+        },
+        {
+          "id": "wemat",
+          "title": "WEMAT",
+          "category": {
+            "en": "Corporate Website",
+            "ro": "Website de prezentare"
+          },
+          "description": {
+            "en": "Frontend development contributions to the corporate website of a company specializing in commercial spaces and fit-out solutions.",
+            "ro": "Contribuții frontend la website-ul unei companii specializate în spații comerciale și soluții de amenajare."
+          },
+          "contributions": [
+            {
+              "en": "Developed and maintained frontend components.",
+              "ro": "Am dezvoltat și întreținut componente frontend."
+            },
+            {
+              "en": "Implemented forms and interactive UI functionality.",
+              "ro": "Am implementat formulare și funcționalități interactive ale interfeței."
+            },
+            {
+              "en": "Integrated frontend features with backend APIs.",
+              "ro": "Am integrat funcționalități frontend cu API-urile backend."
+            },
+            {
+              "en": "Ensured responsive behavior across devices.",
+              "ro": "Am asigurat adaptarea interfeței pe diferite dispozitive."
+            }
+          ],
+          "technologies": [],
+          "links": [
+            {
+              "label": {
+                "en": "Visit Website",
+                "ro": "Vizitează website-ul"
+              },
+              "url": "https://wemat.global/"
+            }
+          ]
+        },
+        {
+          "id": "walkers",
+          "title": "Walkers",
+          "category": {
+            "en": "Corporate Website / Legal Services",
+            "ro": "Website de prezentare / Servicii juridice"
+          },
+          "description": {
+            "en": "Frontend development contributions to the corporate website of an international law firm.",
+            "ro": "Contribuții frontend la website-ul unei firme internaționale de avocatură."
+          },
+          "contributions": [
+            {
+              "en": "Developed reusable frontend components.",
+              "ro": "Am dezvoltat componente frontend reutilizabile."
+            },
+            {
+              "en": "Implemented interactive forms and UI functionality.",
+              "ro": "Am implementat formulare interactive și funcționalități ale interfeței."
+            },
+            {
+              "en": "Worked with backend API integrations.",
+              "ro": "Am lucrat la integrări cu API-urile backend."
+            },
+            {
+              "en": "Implemented responsive layouts for multiple devices.",
+              "ro": "Am implementat layout-uri responsive pentru mai multe tipuri de dispozitive."
+            }
+          ],
+          "technologies": [],
+          "links": [
+            {
+              "label": {
+                "en": "Visit Website",
+                "ro": "Vizitează website-ul"
+              },
+              "url": "https://www.walkersglobal.com/"
+            }
+          ],
+          "image": {
+            "src": "/images/professional-work/walkers.webp",
+            "alt": {
+              "en": "Three Walkers colleagues meeting around a table, from the firm’s official website",
+              "ro": "Trei colegi Walkers într-o întâlnire la o masă, de pe website-ul oficial al firmei"
+            },
+            "caption": {
+              "en": "Official brand photography",
+              "ro": "Fotografie oficială de brand"
+            },
+            "credit": "Walkers",
+            "source": "https://www.walkersglobal.com/",
+            "originalUrl": "https://edge.sitecorecloud.io/walkersglob0d13-walkersglob57a9-prod318d-46e5/media/Project/Walkers-Global/Dotcom-Site/Home/Walkers-Hero-People-around-a-table-Mobile.jpg?mw=1440",
+            "width": 1020,
+            "height": 800
+          }
+        },
+        {
+          "id": "td-synnex",
+          "title": "TD SYNNEX",
+          "category": {
+            "en": "Corporate Website",
+            "ro": "Website de prezentare"
+          },
+          "description": {
+            "en": "Frontend contributions to the website's blog search experience.",
+            "ro": "Contribuții frontend la funcționalitatea de căutare în blogul website-ului."
+          },
+          "contributions": [
+            {
+              "en": "Implemented blog search functionality.",
+              "ro": "Am implementat funcționalitatea de căutare în blog."
+            },
+            {
+              "en": "Used Redux for managing search state and interactions between UI components.",
+              "ro": "Am folosit Redux pentru gestionarea stării căutării și a interacțiunilor dintre componente."
+            },
+            {
+              "en": "Integrated search functionality into the website's frontend.",
+              "ro": "Am integrat căutarea în interfața website-ului."
+            }
+          ],
+          "technologies": [
+            "JavaScript",
+            "Redux"
+          ],
+          "links": [
+            {
+              "label": {
+                "en": "Visit Website",
+                "ro": "Vizitează website-ul"
+              },
+              "url": "https://www.tdsynnex.com/"
+            }
+          ],
+          "year": 2023,
+          "note": {
+            "en": "The website has been significantly redesigned since my involvement. The current search interface is not my original implementation.",
+            "ro": "Website-ul a fost reproiectat semnificativ după implicarea mea. Interfața actuală de căutare nu reprezintă implementarea mea originală."
+          }
+        }
+      ]
+    }
+  },
+  {
     "type": "listcomponent",
     "id": "skills",
     "content": {
@@ -236,6 +796,165 @@
         "en": "I'm a frontend developer based in Bucharest, focused on building clean, performant interfaces and interactive web experiences. I enjoy turning ideas into real products and exploring creative projects, from browser games to 3D experiences on the web.",
         "ro": "Sunt frontend developer in Bucuresti, concentrat pe construirea unor interfete curate, performante si a unor experiente web interactive. Imi place sa transform ideile in produse reale si sa explorez proiecte creative, de la jocuri in browser pana la experiente 3D pe web."
       }
+    }
+  },
+  {
+    "type": "trivia",
+    "id": "trivia",
+    "content": {
+      "title": {
+        "en": "Trivia & little details.",
+        "ro": "Povești și mici detalii."
+      },
+      "subtitle": {
+        "en": "A few things you probably wouldn't guess just by looking at the finished projects.",
+        "ro": "Câteva lucruri pe care probabil nu le-ai ghici doar privind proiectele finalizate."
+      },
+      "labels": {
+        "moreFacts": {
+          "en": "+ {count} facts",
+          "ro": "+ {count} curiozități"
+        },
+        "fewerFacts": {
+          "en": "− Fewer facts",
+          "ro": "− Mai puține curiozități"
+        }
+      },
+      "items": [
+        {
+          "id": "cocapair-origin",
+          "category": {
+            "en": "THE ORIGIN STORY",
+            "ro": "CUM A ÎNCEPUT TOTUL"
+          },
+          "title": {
+            "en": "From a client experiment to CocaPair",
+            "ro": "De la un experiment pentru un client la CocaPair"
+          },
+          "story": {
+            "en": "CocaPair was inspired by my work on the Stimorol DJ App and a proof of concept for The Coca-Cola Company, exploring whether two detected cans could interact in a browser-based experience.",
+            "ro": "CocaPair a fost inspirat de munca mea la Stimorol DJ App și de un prototip pentru The Coca-Cola Company, în care am explorat dacă două doze detectate ar putea interacționa într-o experiență în browser."
+          },
+          "tag": {
+            "en": "Computer Vision",
+            "ro": "Viziune computerizată"
+          }
+        },
+        {
+          "id": "ac-inspiration",
+          "category": {
+            "en": "INSPIRED BY THE DOCS",
+            "ro": "INSPIRAT DE DOCUMENTAȚIE"
+          },
+          "title": {
+            "en": "The AC monogram",
+            "ro": "Monograma AC"
+          },
+          "story": {
+            "en": "While exploring the 8th Wall documentation, I came across a typographic effect I really liked. It inspired the AC monogram featured on this portfolio.",
+            "ro": "În timp ce exploram documentația 8th Wall, am descoperit un efect tipografic care mi-a plăcut mult. Acesta a inspirat monograma AC din acest portofoliu."
+          },
+          "tag": {
+            "en": "Creative Development",
+            "ro": "Dezvoltare creativă"
+          }
+        },
+        {
+          "id": "blender-intervention",
+          "category": {
+            "en": "IT NEEDED SOME WORK",
+            "ro": "MAI AVEA NEVOIE DE LUCRU"
+          },
+          "title": {
+            "en": "A little Blender intervention",
+            "ro": "O mică intervenție în Blender"
+          },
+          "story": {
+            "en": "The 3D model used in my hero originally came from Sketchfab. Its colors and details weren't quite right, so I opened Blender and customized it to fit the site's visual identity.",
+            "ro": "Modelul 3D din secțiunea principală provine de pe Sketchfab. Culorile și detaliile nu se potriveau chiar cum îmi doream, așa că l-am deschis în Blender și l-am personalizat pentru identitatea vizuală a site-ului."
+          },
+          "tag": {
+            "en": "3D & Blender",
+            "ro": "3D & Blender"
+          }
+        },
+        {
+          "id": "design-process",
+          "category": {
+            "en": "DESIGNING WITHOUT BEING A DESIGNER",
+            "ro": "DESIGN FĂRĂ SĂ FIU DESIGNER"
+          },
+          "title": {
+            "en": "From AI concepts to Figma",
+            "ro": "De la concepte AI la Figma"
+          },
+          "story": {
+            "en": "I'm a frontend developer, not a graphic designer. I used an LLM to explore the visual direction of this portfolio, but getting those ideas into Figma wasn't as straightforward as I'd hoped. I ended up recreating and arranging parts of the design manually. Figma is still my favorite tool for web design, although I'm also comfortable working with Photoshop.",
+            "ro": "Sunt frontend developer, nu designer grafic. Am folosit un LLM pentru a explora direcția vizuală a portofoliului, dar transpunerea ideilor în Figma nu a fost atât de simplă pe cât speram. Am ajuns să reconstruiesc și să aranjez manual o parte dintre elemente. Figma rămâne instrumentul meu preferat pentru web design, deși mă descurc și în Photoshop."
+          },
+          "tag": {
+            "en": "Figma & AI",
+            "ro": "Figma & AI"
+          }
+        },
+        {
+          "id": "spectrum-shift-favorite",
+          "category": {
+            "en": "WORK OR PLAY?",
+            "ro": "MUNCĂ SAU JOACĂ?"
+          },
+          "title": {
+            "en": "Getting paid to play (and debug)",
+            "ro": "Plătit să mă joc (și să fac debugging)"
+          },
+          "story": {
+            "en": "Of all the professional projects I've worked on, RNIB Spectrum Shift is probably my favorite. It rarely felt like work. I got to build gameplay mechanics, puzzles and checkpoints, then play through the game multiple times to find and fix bugs. For once, finishing a game was part of the job description.",
+            "ro": "Dintre toate proiectele profesionale la care am lucrat, RNIB Spectrum Shift este probabil preferatul meu. Rareori am simțit că muncesc. Am implementat mecanici de gameplay, puzzle-uri și checkpointuri, apoi am terminat jocul de mai multe ori ca să găsesc și să repar buguri. Pentru o dată, să termini un joc făcea parte din fișa postului."
+          },
+          "tag": {
+            "en": "Game Development",
+            "ro": "Game Development"
+          }
+        },
+        {
+          "id": "object-detection-experiments",
+          "category": {
+            "en": "SAME IDEA, DIFFERENT MODELS",
+            "ro": "ACEEAȘI IDEE, MODELE DIFERITE"
+          },
+          "title": {
+            "en": "Why Scan & Slay and CocaPair behave differently",
+            "ro": "De ce Scan & Slay și CocaPair se comportă diferit"
+          },
+          "story": {
+            "en": "Scan & Slay and CocaPair are two experiments exploring computer vision in the browser. Scan & Slay uses a pretrained YOLO model for general-purpose object detection, so accuracy depends on which objects the model recognizes, lighting, camera angles and confidence thresholds. CocaPair takes a more specialized approach: a custom-trained model focused specifically on Coca-Cola cans. Both projects also explore the practical performance constraints of combining real-time detection, camera input and WebGL-based experiences on everyday devices.",
+            "ro": "Scan & Slay și CocaPair sunt două experimente prin care explorez computer vision în browser. Scan & Slay folosește un model YOLO preantrenat pentru detecție generală, așa că precizia depinde de obiectele pe care modelul le recunoaște, iluminare, unghiul camerei și pragurile de încredere. CocaPair merge pe o abordare specializată: un model antrenat de mine pentru detectarea dozelor Coca-Cola. Ambele proiecte explorează și limitările practice de performanță ale combinării detecției în timp real, camerei și experiențelor bazate pe WebGL pe dispozitive obișnuite."
+          },
+          "tag": {
+            "en": "Computer Vision & WebGL",
+            "ro": "Computer Vision & WebGL"
+          }
+        },
+        {
+          "id": "continuous-learning-next",
+          "category": {
+            "en": "WHAT'S NEXT?",
+            "ro": "CE URMEAZĂ?"
+          },
+          "title": {
+            "en": "An object detector that keeps learning",
+            "ro": "Un detector de obiecte care continuă să învețe"
+          },
+          "story": {
+            "en": "My next planned experiment goes beyond running a trained model in the browser. I want to build an application with CRUD functionality and a continuous-learning workflow, where new examples gathered during usage can be reviewed and used to periodically improve the model. The challenge is making that process reliable without letting incorrect predictions become training data.",
+            "ro": "Următorul meu experiment planificat merge dincolo de simpla rulare a unui model antrenat în browser. Vreau să construiesc o aplicație cu funcționalități CRUD și un flux de continuous learning, în care exemplele noi colectate în timpul utilizării pot fi verificate și folosite pentru îmbunătățirea periodică a modelului. Provocarea este să fac procesul fiabil, fără ca predicțiile greșite să ajungă automat date de antrenare."
+          },
+          "tag": {
+            "en": "Machine Learning & Full Stack",
+            "ro": "Machine Learning & Full Stack"
+          }
+        }
+      ]
     }
   },
   {

@@ -1,66 +1,194 @@
-@use "../../styles/tokens" as *;
+﻿@use "../../styles/tokens" as *;
+
+.about-overflow {
+  overflow: clip;
+}
 .about {
-  border-top: 1px solid $border;
-  padding: 65px 0 80px;
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  border-top: 1px solid $border; // taste-skill-ignore: preserve the existing section separator.
+  padding: 52px 0 28px;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 90px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 36px;
   align-items: center;
   h2 {
     font-size: clamp(28px, 3.4vw, 48px);
     line-height: 1.12;
     font-weight: 500;
     letter-spacing: -0.05em;
-    margin: 24px 0 30px;
+    margin: 24px 0 22px;
     em {
       color: #acbf92;
       font-style: normal;
     }
   }
 }
-.about-body {
-  > p {
-    font-size: 16px;
-    color: $muted;
-    line-height: 1.85;
+.about-copy {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  .button {
+    margin-top: 26px;
   }
 }
+.about-body > p {
+  max-width: 49ch;
+  font-size: 16px;
+  color: $muted;
+  line-height: 1.75;
+}
 .about-note {
+  grid-column: 1 / -1;
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  margin-top: 30px;
-  font-size: 9px;
+  margin-top: 34px;
+  font-size: 10px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $muted;
 }
-@media (max-width: 800px) {
+.about-monogram-slot {
+  min-width: 0;
+  width: 110%;
+  margin-left: -4%;
+  aspect-ratio: 640 / 420;
+}
+.about-monogram {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.88;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: -34% -50% -30% -10%;
+    background: radial-gradient(
+      ellipse at 52% 50%,
+      rgba($lime, 0.12),
+      rgba($sage, 0.24) 35%,
+      rgba($olive, 0.12) 55%,
+      transparent 74%
+    );
+    filter: blur(34px);
+    opacity: 0.5;
+    animation: ac-glow-pulse 6.8s ease-in-out -2.4s infinite;
+    animation-play-state: paused;
+  }
+  svg {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+}
+// Sixteen phase-shifted columns keep the silhouette steady with a small animation budget.
+.about-monogram-column {
+  opacity: 0.85;
+  animation: ac-brightness-wave var(--wave-duration) ease-in-out
+    var(--wave-delay) infinite;
+  animation-play-state: paused;
+}
+.about-monogram-fragment {
+  fill: $lime;
+  opacity: calc(0.68 + var(--near, 0) * 0.32);
+  transform: translate(
+    calc(var(--near, 0) * 1.5px),
+    calc(var(--near, 0) * -1.8px)
+  );
+  transition:
+    opacity 220ms ease-out,
+    transform 420ms ease-out;
+}
+html[data-motion="running"] .about-monogram[data-active="true"]::before,
+html[data-motion="running"]
+  .about-monogram[data-active="true"]
+  .about-monogram-column {
+  animation-play-state: running;
+}
+@keyframes ac-glow-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.94);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.06);
+  }
+}
+@keyframes ac-brightness-wave {
+  0%,
+  100% {
+    opacity: 0.56;
+  }
+  44% {
+    opacity: 0.74;
+  }
+  62% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 0.68;
+  }
+}
+@media (max-width: 1000px) {
   .about {
-    gap: 35px;
-    grid-template-columns: 1fr;
-    padding: 45px 0;
+    column-gap: 24px;
     h2 {
-      font-size: 34px;
+      font-size: clamp(28px, 3.6vw, 38px);
+    }
+  }
+  .about-monogram-slot {
+    width: 118%;
+    margin-left: -5%;
+  }
+}
+@media (max-width: 700px) {
+  .about {
+    grid-template-columns: 1fr;
+    padding: 38px 0 26px;
+    row-gap: 20px;
+    h2 {
+      font-size: clamp(28px, 8.4vw, 38px);
     }
   }
   .about-body > p {
-    font-size: 15px;
+    max-width: 55ch;
+  }
+  .about-monogram-slot {
+    width: min(100%, 380px);
+    margin: -8px auto -22px;
+  }
+  .about-monogram {
+    opacity: 0.8;
+    &::before {
+      inset: -20% -41% -18% 1%;
+    }
+  }
+  .about-note {
+    margin-top: 14px;
+    font-size: 9px;
   }
 }
-.about-note {
-  font-size: 10px;
-}
-.about-body > p {
-  max-width: 60ch;
-}
-@media (max-width: 600px) {
-  .about h2 {
-    font-size: clamp(28px, 8.7vw, 34px);
+@media (prefers-reduced-motion: reduce) {
+  html[data-motion] .about.reveal.is-revealed .reveal-item {
+    animation: none !important;
   }
-}
-@media (max-width: 800px) {
-  .about-body > p {
-    font-size: 16px;
+  .about *,
+  .about *::before,
+  .about *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }
