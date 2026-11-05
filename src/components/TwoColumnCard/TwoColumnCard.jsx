@@ -27,33 +27,23 @@ export function TwoColumnCard({ content = {}, compact = false }) {
       className={`project reveal-item ${isCoca ? "project-coca" : "project-scan"}`}
       style={{ "--reveal-delay": isCoca ? "140ms" : "70ms" }}
     >
-      {isCoca ? (
-        <img
-          className="project-image"
-          src="/images/cocapair-concept.webp"
-          alt={
-            language === "en"
-              ? "Concept artwork: red and black soda cans with dramatic red lighting"
-              : "Imagine de concept: doze roșii și negre în lumina roșie"
-          }
-          width="1536"
-          height="1024"
-          loading="lazy"
-        />
-      ) : (
-        <>
-          <img
-            className="project-image"
-            src="/images/scan-slay-concept.png"
-            alt={translate(content.image?.alt)}
-            width="1536"
-            height="1024"
-            loading="lazy"
-          />
-          
-        </>
-      )}
-      <div className="project-shade" />
+      <img
+        className="project-image"
+        src={content.image?.src}
+        alt={translate(content.image?.alt)}
+        width={content.image?.width ?? 1536}
+        height={content.image?.height ?? 1024}
+        loading="lazy"
+        style={{
+          objectFit: content.image?.fit,
+          objectPosition: content.image?.position,
+          backgroundColor: content.image?.background,
+        }}
+      />
+      <div
+        className="project-shade"
+        style={{ background: content.image?.overlay }}
+      />
       <div className="project-top">
         <span>
           {isCoca
@@ -98,13 +88,15 @@ export function TwoColumnCard({ content = {}, compact = false }) {
         </div>
       </div>
       <span className="project-caption">
-        {language === "en"
-          ? isCoca
-            ? "Concept artwork"
-            : "AR concept artwork / React / YOLO"
-          : isCoca
-            ? "Imagine de concept"
-            : "Concept AR / React / YOLO"}
+        {content.caption
+          ? translate(content.caption)
+          : language === "en"
+            ? isCoca
+              ? "Concept artwork"
+              : "AR concept artwork / React / YOLO"
+            : isCoca
+              ? "Imagine de concept"
+              : "Concept AR / React / YOLO"}
       </span>
     </article>
   );

@@ -94,7 +94,9 @@
       },
       "stack": ["React", "JavaScript", "YOLO", "3D models", "Camera API"],
       "image": {
-        "src": "src/assets/images/laptop.png",
+        "src": "/images/scan-slay-concept.png",
+        "width": 1536,
+        "height": 1024,
         "alt": {
           "en": "AR concept artwork: a stone monster seen through a phone camera",
           "ro": "Concept AR: un monstru de piatra vazut prin camera telefonului"
@@ -130,7 +132,32 @@
         "ro": "Două doze. O conexiune. O experiență mobilă ce asociază Coca-Cola Original și Zero cu un model YOLO antrenat special."
       },
       "stack": ["React", "YOLO", "Computer vision"],
-      "links": []
+      "image": {
+        "src": "/images/cocapair-thumbnail.webp",
+        "width": 790,
+        "height": 562,
+        "fit": "contain",
+        "position": "center",
+        "background": "#200006",
+        "overlay": "linear-gradient(0deg, rgba(12, 0, 3, 0.98), rgba(12, 0, 3, 0.82) 34%, rgba(12, 0, 3, 0.08) 72%, rgba(12, 0, 3, 0.25))",
+        "alt": {
+          "en": "Two red Coca-Cola cans leaning together beneath a glowing heart.",
+          "ro": "Două doze roșii Coca-Cola apropiate sub o inimă."
+        }
+      },
+      "caption": {
+        "en": "Live demo · Work in progress",
+        "ro": "Demo live · În lucru"
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Explore live demo",
+            "ro": "Explorează demo-ul live"
+          },
+          "url": "https://cocapair.alincordunianu.ro"
+        }
+      ]
     }
   },
   {
@@ -257,11 +284,7 @@
               "ro": "Am lucrat la gestionarea accesului și a permisiunilor administratorilor."
             }
           ],
-          "technologies": [
-            "WebSockets",
-            "Admin Dashboard",
-            "REST APIs"
-          ],
+          "technologies": ["WebSockets", "Admin Dashboard", "REST APIs"],
           "links": [
             {
               "label": {
@@ -335,7 +358,7 @@
               "en": "WPP",
               "ro": "WPP"
             },
-           
+
             "credit": "WPP",
             "width": 429,
             "height": 602,
@@ -431,9 +454,7 @@
               "ro": "Am dezvoltat sistemul de puncte de control."
             }
           ],
-          "technologies": [
-            "Godot"
-          ],
+          "technologies": ["Godot"],
           "links": [
             {
               "label": {
@@ -493,11 +514,7 @@
               "ro": "Am contribuit la funcționalitățile frontend ale experienței interactive."
             }
           ],
-          "technologies": [
-            "TypeScript",
-            "3D Integration",
-            "Interactive Web"
-          ],
+          "technologies": ["TypeScript", "3D Integration", "Interactive Web"],
           "links": [
             {
               "label": {
@@ -707,10 +724,7 @@
               "ro": "Am integrat căutarea în interfața website-ului."
             }
           ],
-          "technologies": [
-            "JavaScript",
-            "Redux"
-          ],
+          "technologies": ["JavaScript", "Redux"],
           "links": [
             {
               "label": {
